@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
-match = ARGV[0].match(/to=(.*?),.*from=(.*?),.*flags=(.*)/)
-
-puts "#{match[2]},#{match[1]},#{match[3]}"
+input = ARGV[0]
+m = input.match(/from:([^]]+).*to:([^]]+).*flags:([^]]+)/)
+puts "#{m[1]},#{m[2]},#{m[3]}" if m
